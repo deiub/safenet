@@ -1,0 +1,733 @@
+body { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(241, 241, 241);
+}
+
+
+
+
+.navbar {
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0px 0px 20px rgba(41, 41, 41, 0.11); 
+}
+
+#navbarNav ul li a, .container .navbar-brand {
+    color: #001f41;
+}
+
+#navbarNav ul li a {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.navbar-brand {
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #0056b3;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background-color: #0056b3;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #003d80;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar-nav {
+        margin-left: 0;
+    }
+    .navbar-brand {
+        font-size: 2rem;
+        margin-left: 200px;
+    }
+}
+
+.navbar-collapse {
+    justify-content: space-between;
+}
+
+
+
+.background {
+    position: relative;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 42%, 46% 52%, 0 36%);
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 10, 26, 0.904);
+    z-index: 1;
+}
+
+.title {
+    position: relative;
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    z-index: 2;
+    top: 190px;
+}
+
+.sub-title {
+    position: relative;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    z-index: 2;
+    top: 190px;
+    left: -225px;
+}
+
+.circle-path {
+    display: flex;
+    justify-content: center;
+    margin-top: -450px;
+    margin-bottom: 200px;
+}
+
+.circle-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center text */
+    margin: 70px;
+}
+
+.circle {
+    background-color: rgb(6, 25, 66);
+    color: white;
+    border-radius: 50%;
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    font-size: 70px;
+}
+
+.circle:hover {
+    background-color: transparent; /* Remove background on hover */
+    color: rgb(6, 25, 66); /* Change text color on hover */
+}
+
+.circle-content p {
+    color: rgb(6, 25, 66); /* Change text color on hover */
+    margin: 30px 0 0 0; /* Add margin for spacing below the circle */
+    font-size: 1.2rem; /* Adjust font size as needed */
+    font-weight: 500;
+}
+
+#introduction {
+    padding: 50px;
+    min-width: 60%;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-left: 5px solid rgb(6, 25, 66);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    color: rgb(6, 25, 66);
+    position: relative;
+    margin-bottom: 200px;
+}
+
+#introduction::before {
+    content: '"';
+    font-size: 50px;
+    color: rgb(6, 25, 66);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+}
+
+#introduction::after {
+    content: '"';
+    font-size: 50px;
+    color: rgb(6, 25, 66);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-weight: bold;
+}
+
+#introduction h3 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+#introduction p {
+    font-size: 1.2rem;
+    font-weight: 200;
+
+}
+
+
+/* 
+.usb1 img:hover {
+    border-radius: 50%;
+} */
+
+/* 
+.usb-containers .row {
+   gap: 200px;
+} */
+
+.usbtitle h1 {
+
+    max-height: 200px;
+}
+
+.usbtitle p {
+    min-height: 90px;
+    max-height: 200px;
+}
+
+
+
+.usb1, .usb2, .usb3 {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: start;
+    position: relative;
+    border-radius: 20px;
+    width: 600px;
+    margin-bottom: 50px;
+}
+
+.usb1 .und-icon, .usb2 .und-icon, .usb3 .und-icon {
+    position: absolute;
+    border-radius: 50%;
+    top: -40px;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 65px;
+    text-align: center;
+    left: 42%;
+    font-size: 30px;
+    background-color: rgb(0, 60, 255);
+    color: white;
+
+}
+
+
+
+.custom-dashed-line-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.custom-dashed-line {
+    width: 30%;
+    border-top: 2px solid #000000; /* Dashed line style */
+    margin: 0 10px; /* Space between the dashed line and the icon */
+}
+
+.custom-icon {
+    font-size: 50px; /* Adjust the icon size as needed */
+    color: #030027; /* Icon color */
+}
+
+
+/* end */
+
+
+.safety-tips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.safety-tips-title {
+    padding-top: 150px;
+    font-size: 3rem; /* Adjust font size as needed */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold; /* Makes the title bold */
+    
+}
+
+#gethelp {
+    padding-top: 120px;
+}
+
+.tips-card-container {
+    width: 1200px;
+}
+
+.tips-card {
+    background: rgb(9,5,66);
+background: linear-gradient(332deg, rgba(9,5,66,1) 0%, rgba(3,0,39,1) 47%, rgba(3,0,39,1) 100%);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px 40px 50px 40px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    color: rgb(243, 250, 255);
+}
+
+.tips-card-title {
+    font-size: 1.9rem;
+}
+
+.tips-card-description {
+    height: 100px;
+    text-align: justify;
+}
+
+.tips-card img {
+    width: 60px;
+    height: 50px;
+}
+
+.tips-card:hover {
+    transform: scale(1.05);
+}
+
+.tips-card-logo {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+    margin: 20px 0 20px 0;
+}
+
+.tips-read-more {
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+    background-color: transparent;
+    color: rgb(240, 240, 240);
+    border:none;
+}
+
+.tips-read-more:hover {
+    font-weight: 500;
+    text-decoration: underline;
+
+
+}
+
+.tips-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+    
+}
+
+.tips-popup-content {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    width: 900px;
+    position: relative;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.tips-popup-content .scrollable {
+    padding: 20px;              
+    height: 600px;         
+    overflow-y: auto;        
+    overflow-x: hidden;       
+    width: 100%;        
+    margin-bottom: 50px; 
+}
+
+
+.tips-popup-content .scrollableTitle {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #0D52F7;
+    padding: 20px 0 20px 0;
+    color: rgb(252, 252, 252);
+}
+
+.tips-popup-content .scrollableTitle .semiTitle {
+    margin: 5px 0 0 8px;
+}
+
+.scrollable ol li p strong {
+    color: rgb(1, 0, 37);
+    font-weight: 700;
+}
+
+
+.tips-popup-content .subtitles {
+    font-style: italic;
+    font-weight: 400;
+}
+
+ .scrollable p {
+    font-weight: 300;
+}
+
+
+.tips-popup-content .conclu {
+    margin: 50px 0 0 0;
+}
+
+
+
+.tips-popup-content h3 {
+    text-align: center;
+}
+
+.tips-popup-content ol li {
+    text-align: justify;
+}
+
+.popup-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .tips-card-container {
+        flex-direction: column;
+    }
+}
+
+
+.reportingSec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+
+
+.reporting-section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.384);
+    max-width: 1000px;
+    width: 90%;
+    padding: 20px;
+    color: rgb(19, 2, 20);
+    text-align: left;
+    position: relative;
+}
+.reporting-section h2 {
+    color: rgb(19, 2, 20);
+    font-size: 2rem;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.reporting-section h4 {
+    position: absolute;
+    font-size: 23px;
+    top: -23px;
+    color:red;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+    left: 43%;
+}
+.reporting-section h3 {
+    color: rgb(19, 2, 20);
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.reporting-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.reporting-section li {
+    margin-bottom: 15px;
+}
+
+.reporting-section .cyber-link {
+    text-decoration: none;
+    color: rgb(39, 39, 255);
+}
+.reporting-section ul a {
+    color: rgb(19, 2, 20);
+    text-decoration: none;
+}
+.reporting-section a:hover {
+    text-decoration: underline;
+}
+.reporting-section strong {
+    font-weight: 500;
+    color: rgb(19, 2, 20);
+}
+.reporting-section p {
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+.reporting-section ul .fa {
+    padding-right: 10px;
+}
+
+.first-call, .second-call, .third-call {
+    border-bottom: rgb(19, 2, 20) 2px solid;
+}
+.first-call ul li:nth-child(2) span, .second-call ul li:nth-child(2) span, .third-call ul li:nth-child(2) span   {
+    border-radius: 5px;
+    padding-top: 2px;    
+}
+
+
+.first-call ul li:nth-child(2) strong:first-child, 
+.second-call ul li:nth-child(2) strong:first-child,
+.third-call ul li:nth-child(2) strong:first-child {
+    margin-right: 5px;
+}
+.fa.fa-clock {
+    color: black;
+}
+
+.first-call {
+    border-top: rgb(19, 2, 20) 2px solid;
+    
+}
+
+.open-time {
+    color: rgb(0, 151, 0) !important; 
+    font-weight: 500;
+} 
+
+
+
+
+ #news-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .news-item {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    width: 520px;
+    box-shadow: 0 2px 10px rgba(6, 0, 61, 0.144);
+    max-height: 950px;
+  }
+  
+  .news-title {
+    font-size: 24px;
+    padding: 20px;
+
+  }
+  
+  .news-label {
+    color: red; /* Red color for the "News" label */
+    font-weight: bold;
+  }
+  
+  .news-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+    padding: 15px;
+  }
+  
+  .news-item iframe {
+    width: 500px;
+    height: 300px;
+  }
+  
+  .news-item img {
+    width: 100%;
+    height: 10px;
+  }
+
+
+  .custom-social-icons {
+    position: fixed;
+    bottom: 200px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10000;
+  }
+
+  .custom-social-icon {
+    background-color: #030108;
+    color: white;
+    padding: 14px;
+    border-radius: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  .custom-social-icon:hover {
+    background-color: #ff5733; /* Change on hover */
+  }
+
+  .custom-social-icon i {
+    vertical-align: middle;
+  }
+
+
+
+  
+.blocks {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
+}
+  
+  @keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+  
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+  }
+
+
+.blocks1 {
+    animation: appears linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%; 
+}
+
+
+@keyframes appears {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+  
+    to {
+        opacity: 1;
+        transform: translate(-0px);
+    }
+  }
+
+
+@media (max-width: 1274px) {
+   .tips-card-description {
+    text-align: center;
+   }
+
+
+ 
+}
+
+
+
+.footer {
+    background-color: rgb(6, 25, 66);; /* Dark background for footer */
+    color: #ffffff; /* White text */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Padding for top and bottom */
+    position: relative;
+    width: 100%; /* Ensure the footer spans across the entire width */
+    bottom: 0; /* Keep it at the bottom of the page */
+  }
+  
+  .footer-container {
+    max-width: 1200px; /* Set a maximum width */
+    margin: 0 auto; /* Center the footer content horizontally */
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .footer-links {
+    margin-top: 10px; /* Add space above the links */
+  }
+  
+  .footer-links a {
+    color: #ffffff; /* White color for links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 0 10px; /* Add spacing between links */
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline; /* Underline effect when hovering over links */
+  }
+  
