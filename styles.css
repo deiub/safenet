@@ -617,7 +617,7 @@ background: linear-gradient(332deg, rgba(9,5,66,1) 0%, rgba(3,0,39,1) 47%, rgba(
 
   .custom-social-icons {
     position: fixed;
-    bottom: 200px;
+    bottom: 10px;
     left: 20px;
     display: flex;
     flex-direction: column;
@@ -627,17 +627,20 @@ background: linear-gradient(332deg, rgba(9,5,66,1) 0%, rgba(3,0,39,1) 47%, rgba(
   .custom-social-icon {
     background-color: #030108;
     color: white;
-    padding: 14px;
+    padding: 12px;
     border-radius: 100%;
     margin-bottom: 10px;
     text-align: center;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 500;
     transition: background-color 0.3s ease;
+    border: solid 1px grey;
   }
 
   .custom-social-icon:hover {
-    background-color: #ff5733; /* Change on hover */
+   background-color: white;
+   color: #030108;
+   border: solid 1px #030108;
   }
 
   .custom-social-icon i {
